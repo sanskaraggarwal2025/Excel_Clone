@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./style.css">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+ <title>Excel</title>
+</head>
+
+<body>
+ <div class="page-actions-cont">
+  <div class="page-action">Home</div>
+  <div class="page-action">File</div>
+  <div class="page-action">Insert</div>
+  <div class="page-action">Layout</div>
+  <div class="page-action">Help</div>
+ </div>
+
+
+
+ <div class="cellprop-actions-cont">
+  <i class="fa-regular fa-copy"></i>
+  <i class="fa-solid fa-scissors"></i>
+  <i class="fa-regular fa-paste"></i>
+  <select class="font-family-prop">
+   <option value="monospace">Monospace</option>
+   <option value="sans-serif">Sans-Serif</option>
+   <option value="fantasy">Fantasy</option>
+   <option value="cursive">Cursive</option>
+  </select>
+  <select class="font-size-prop">
+   <option value="14">14</option>
+   <option value="16">16</option>
+   <option value="18">18</option>
+   <option value="20">20</option>
+  </select>
+  <i class="fa-solid fa-bold"></i>
+  <i class="fa-solid fa-italic"></i>
+  <i class="fa-solid fa-underline"></i>
+  <i class="fa-solid fa-align-left"></i>
+  <i class="fa-solid fa-align-center"></i>
+  <i class="fa-solid fa-align-right"></i>
+ </div>
+
+
+ <div class="formula-actions-cont">
+  <input type="text" readonly class="address-bar">
+  <img class = "formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png" >
+  <input type="text" class="formula-bar">
+ </div>
+
+
+
+
+
+ <div class="grid-cont">
+  <div class="top-left-dummy-box"></div>
+  <div class="address-col-cont"></div>
+  <div class="cells-cont">
+   <div class="address-row-cont"></div>
+  </div>
+ </div>
+
+
+
+
+ <div class="sheet-actions-cont">
+  <div class="sheet-add-icon">
+   <i class="fa-solid fa-file-circle-plus"></i>
+  </div>
+  <div class="sheets-folder-cont">
+   <div class="sheet-folder">Sheet1</div>
+  </div>
+ </div>
+
+
+ <script src="./script.js"></script>
+</body>
+
+</html>
