@@ -28,6 +28,9 @@ body{
   margin: 0.5rem;
   padding-right: 1rem;
 }
+.cellprop-actions-cont>*{
+  cursor:pointer
+}
 .font-family-prop{
   padding:0.2rem;
   border: none;
@@ -164,4 +167,15 @@ background-color: #ecf0f1;
   width: 5rem;
   border: 1px solid #dfe4ea;
   outline: none;
+}
+.color-prop{
+  position: relative;
+}
+.color-prop > input{
+  opacity: 0;
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
