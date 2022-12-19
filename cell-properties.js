@@ -15,6 +15,7 @@ for (let i = 0; i < rows; i++) {
       BGcolor: "#000000",
       value:"",
       formula:"",
+      children:[],
     }
 
     sheetRow.push(cellProp);
@@ -42,10 +43,13 @@ let inactiveColorProp = "#ecf0f1";
 //Application of Two-way binding
 bold.addEventListener("click", (e) => {
   let address = addressBar.value;
-  console.log(typeof(address));
+  
   let [cell, cellProp] = getCellAndCellProp(address);
+  console.log(cellProp.bold);
   //Modification
   cellProp.bold = !cellProp.bold;
+  console.log(cellProp.bold);
+
   cell.style.fontWeight = cellProp.bold ? "bold" : "normal";
   bold.style.backgroundColor = cellProp.bold ? activeColorProp : inactiveColorProp;
 })
@@ -180,7 +184,8 @@ function addListenerToAttachCellProperties(cell) {
         rightAlign.style.backgroundColor = activeColorProp;
         break;
     }
-
+   
+    
   
   })
 }
@@ -188,17 +193,16 @@ function addListenerToAttachCellProperties(cell) {
 
 
 function getCellAndCellProp(address) {
-  console.log(address);
   let [rid, cid] = decodeRIDCIDFromAddress(address);
   //Accessing cell and storage object
   let cell = document.querySelector(`.cell[rid = "${rid}"][cid = "${cid}"]`);
   let cellProp = sheetDB[rid][cid];
-  console.log(cellProp.value);
   return [cell, cellProp];
 }
 
 function decodeRIDCIDFromAddress(address) {
   let rid = Number(address.slice(1) - 1);
   let cid = Number(address.charCodeAt(0)) - 65;
+  
   return [rid, cid];
 }
