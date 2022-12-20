@@ -8,6 +8,10 @@ for (let i = 0; i < rows; i++) {
 
    if (enteredData === cellProp.value) return;
    cellProp.value = enteredData;
+   //If data modifies update,remove P-C relation, formula empty, update children with new hardcoded(modified) value
+   removeChildFromParent(cellProp.formula);
+   cellProp.formula = "";
+   updateChildrenCells(address);
   })
  }
 }
@@ -16,6 +20,8 @@ let formulaBar = document.querySelector(".formula-bar");
 formulaBar.addEventListener("keydown", (e) => {
  let inputFormula = formulaBar.value;
  if (e.key === "Enter" && inputFormula) {
+
+  //If change in formula, break old P-C relation,evaluate new formula, add new P-C relation
   let address = addressBar.value;
   let [cell, cellProp] = getCellAndCellProp(address);
   if (inputFormula !== cellProp.formula) removeChildFromParent(cellProp.formula);
@@ -88,7 +94,7 @@ function evaluateFormula(formula) {
 }
 
 function setCellUIAndCellProp(evaluatedValue, formula, address) {
- address = addressBar.value;
+ // address = addressBar.value;
  let [cell, cellProp] = getCellAndCellProp(address);
  console.log(evaluatedValue);
  cell.innerText = evaluatedValue;

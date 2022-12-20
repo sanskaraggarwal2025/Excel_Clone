@@ -134,6 +134,7 @@ alignment.forEach((alignELem) => {
         break;
     }
 
+   
   })
 })
 let allCells = document.querySelectorAll(".cell");
@@ -184,7 +185,9 @@ function addListenerToAttachCellProperties(cell) {
         rightAlign.style.backgroundColor = activeColorProp;
         break;
     }
-   
+    let formulaBar = document.querySelector(".formula-bar");
+    formulaBar.value = cellProp.formula;
+    cell.value = cellProp.value;
     
   
   })
