@@ -49,7 +49,6 @@ function addListenerForAddressBarDisplay(cell,i,j){
 
 }
 
-let firstCell = document.querySelector(".cell")
-firstCell.click();
+
 
 

@@ -96,18 +96,25 @@ background-color: #ecf0f1;
   margin-right: 0.3rem; */
   width:2vw;
 }
+.sheet-add-icon:hover {
+  cursor: default;
+}
 .sheets-folder-cont {
   height: 80%;
   width:5rem;
   width:calc(100vw - 2vw);
   display: flex;
   align-items: center;
+  overflow: auto;
 }
 .sheet-folder{
   text-decoration: underline;
   font-weight: bold;
   text-decoration-thickness: 2px;
   font-size: 0.9rem;
+}
+.sheet-content{
+  width:5rem;
 }
 
 .top-left-dummy-box{
